@@ -1,12 +1,19 @@
 # Your code here
 
-
+ht = {}
 
 def finder(files, queries):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+
+    # get the last items from all the files
+    for i in range(len(files)):
+        ht[files[i].split('/')[-1]] = i
+        # ht[files[i]] = i
+
+    result = []
+
+    for q in queries:
+        if q in ht:
+            result.append(files[ht[q]])
 
     return result
 
