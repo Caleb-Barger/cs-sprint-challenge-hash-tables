@@ -5,10 +5,26 @@ class Ticket:
         self.destination = destination
 
 
-def reconstruct_trip(tickets, length):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+ht = {}
 
+def reconstruct_trip(tickets, length):
+
+    # source is NONE for the first ticket
+    # destination is NONE for the last ticket
+
+    for i in range(length):
+        ht[tickets[i].source] = tickets[i].destination
+
+    # reconstruct order
+    route = [ht["NONE"]]
+
+
+    for i in range(length):
+        if route[i] == "NONE":
+            break
+        route.append(ht[route[i]])
+    
     return route
+
+
+

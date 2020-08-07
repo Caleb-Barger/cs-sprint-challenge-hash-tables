@@ -23,11 +23,28 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
 1. Hashing functions
+    Hashing functions can take an input and run it through some sort of algorithm (there are a bunch of them) and produce the same
+    result based on the given input. We as developers can use this behavior to locate things inside a collection based on an input.
+    also known as a hash table.
 2. Collision resolution
+    When a developer has a constraint on the size of the internal data structure representing the hash map, collisions are inveitable
+    the act of dealing with an index (produced by our hashing function) that is shared by a prev entry in our data structure is collision resoulotion.
+    For example a simple way of dealing with these occurences is using Linked lists! Having 1-3 values at most sharing a space is not going to have 
+    a noticable impact on runtime.
 3. Performance of basic hash table operations
+    resizing a hash table (depending on the implementation) might be o(n) because we have to work our way through the datastructure
+    and preform the hash on each item. Fetching/Removing items from the hash table will be O(1) beacuse we feed the value we are searching for
+    into our hashing algorithm which will produce the location of the item that we are searching for.
 4. Load factor
+    Is information held within the hash table that decides when the size of the underlying data structure needs to be increased or decreased
+    it can be calculated by taking the number of "occupied slots" by the total number of slots. In practice when the load factor moves past 
+    0.7 collisions will start to happen more so in order to deal with this we just increase size
 5. Automatic resizing
+    this is an implementation that looks at ^^load factor^^ and deals with the details of how to go about re hasing everything and
+    increasing/decreasing list size. Usally it is refrenced whenever a new item is added or removed
 6. Various use cases for hash tables
+    hash tables are great for efficentcy and "big data". They allow programers to compute things once and store the answer (aka memoization) or (caching)
+    as well as save on time complexity by implementing their hash methods in order to quickly find and access diffrent areas of their underlying data set.
 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -35,25 +52,25 @@ We expect you to be able to answer questions in these areas. Your responses cont
 
 ### Task 1: Project Set-Up
 
-- [ ] Create a forked copy of this project
-- [ ] Add your team lead as a collaborator on Github
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
-- [ ] Push commits: git push origin `<firstName-lastName>`
+- [x] Create a forked copy of this project
+- [x] Add your team lead as a collaborator on Github
+- [x] Clone your OWN version of the repository (Not Lambda's by mistake!)
+- [x] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
+- [x] Push commits: git push origin `<firstName-lastName>`
 
 ### Task 2: Project Requirements
 
 Your finished project must include all of the following requirements:
 
-- [ ] Solve any three of the five problems
+- [x] Solve any three of the five problems
 
 For each problem that you choose to solve, complete the following:
 
-- [ ] Navigate into each exercise's directory
-- [ ] Read the instructions for the exercise in the README
-- [ ] Implement your solution in the `.py` skeleton file
-- [ ] Make sure your code passes the tests running the test script with make tests
+- [x] Navigate into each exercise's directory
+- [x] Read the instructions for the exercise in the README
+- [x] Implement your solution in the `.py` skeleton file
+- [x] Make sure your code passes the tests running the test script with make tests
 
 *Note: For these exercises, we expect you to use Python's built-in `dict` as a hashtable. That said, if you wish, you can attempt to solve using your own hashtable implementation, as well. All solutions should utilize a `dict` or hashtable. You should not use Sets. (Though you can make a `dict` behave like a set if you wish.)*
 
@@ -61,7 +78,7 @@ For each problem that you choose to solve, complete the following:
 
 After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module, but they build on the material you just studied. Time allowing, stretch your limits, and see if you can deliver on the following optional goals:
 
-- [ ] Solve any four of the five problems
+- [x] Solve any four of the five problems
 - [ ] Solve all five problems
 
 ## Submission format
